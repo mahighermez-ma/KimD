@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/crd"
+
+        >
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        android:id="@+id/CardViewGetChild"
+        card_view:cardCornerRadius="6dp"
+        android:alpha="1"
+        android:elevation="1000dp"
+        app:elevation="1000dp"
+        app:cardBackgroundColor="@color/colorPrimar"
+        android:background="#cfd1d1"
+        app:ignore="NamespaceTypo">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/linert">
+
+            <Button
+                android:id="@+id/btnOpenDrawer"
+                android:layout_height="46dp"
+                android:layout_width="55dp"
+                android:layout_alignParentTop="true"
+                android:onClick="btndrawer"
+                tools:ignore="OnClick"
+                android:layout_marginVertical="0dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/hamberic"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edtphonesearch"
+                        android:layout_width="305dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:ems="10"
+                        android:hint="Search numbers, names"
+                        android:padding="10dp"
+                        android:textColorHint="@color/colorPrimary"
+
+
+                        />
+
+                    <ImageButton
+                        android:id="@+id/imgleftdra"
+                        android:layout_weight="1"
+                        style="?android:buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:src="@drawable/ic_search_black_24dp" />
+                </LinearLayout>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/ic_search_black_24dp"
+                android:id="@+id/btnsearches"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="1000dp"
+            >
+        <androidx.recyclerview.widget.RecyclerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/recyclercall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutAnimation="@anim/layout_animation_fall_down"
+            android:scrollbars="vertical"
+            /></RelativeLayout>
+    <!-- our toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        >
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- our tablayout to display tabs  -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+        </HorizontalScrollView>
+        <!-- View pager to swipe views -->
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout></LinearLayout>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentBottom="true"
+    android:elevation="1000dp"
+    android:background="#f1f0f0"
+    android:id="@+id/crd"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:text="Contacts"
+        android:gravity="center_horizontal"
+        android:drawableTop="@drawable/ic_contact_phone_black_24dp"
+        android:layout_marginHorizontal="30dp"
+        android:id="@+id/txtcontact"
+        android:textSize="12dp"
+        android:textStyle="italic"
+        android:layout_marginBottom="10dp"
+        android:onClick="btncon"
+        tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/txtcall"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="30dp"
+            android:drawableTop="@drawable/ic_phone_black_24dp"
+            android:gravity="center_horizontal"
+            android:text="Call"
+            android:textSize="12dp"
+            android:textStyle="italic"
+            android:onClick="btncall"
+            tools:ignore="OnClick" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:text="Block"
+        android:gravity="center_horizontal"
+        android:drawableTop="@drawable/ic_blockwhite"
+        android:layout_marginHorizontal="30dp"
+        android:id="@+id/txtblock"
+        android:textSize="12dp"
+        android:textStyle="italic"
+        android:onClick="btnblock"
+        tools:ignore="OnClick" /></LinearLayout>
+</androidx.cardview.widget.CardView>
+
+</RelativeLayout>

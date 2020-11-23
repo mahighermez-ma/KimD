@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CallFragment">
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.recyclerview.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/recyclercall"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:scaleType="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="30dp"
+        android:clickable="true"
+        android:elevation="100dp"
+        android:src="@drawable/ic_up_arrow"
+        app:backgroundTint="#e5e7ea"
+        app:elevation="600dp"
+        app:fabSize="mini"
+        app:layout_anchorGravity="bottom"
+        app:rippleColor="#e5e7ea"
+        android:visibility="gone"
+        tools:ignore="UnusedAttribute" />
+</RelativeLayout>

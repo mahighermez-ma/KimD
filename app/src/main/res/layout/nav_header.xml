@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@drawable/backgradiant"
+    android:gravity="bottom"
+    android:theme="@style/ThemeOverlay.AppCompat.Dialog"
+    >
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+
+        android:gravity="bottom"
+        android:theme="@style/ThemeOverlay.AppCompat.Dialog"
+        >
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/ic_launcher"
+            android:layout_centerInParent="true"
+            android:id="@+id/imglog"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/txtremind"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/colorPrimary" />
+
+    </RelativeLayout>
+</RelativeLayout>
